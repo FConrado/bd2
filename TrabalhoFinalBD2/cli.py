@@ -9,7 +9,7 @@ class SimpleCLI:
     def run(self):
         while True:
             command = input("Insira um comando: ").lower()
-            if (command == "sair" or "9"):
+            if (command == "sair" or command == "9"):
                 print("Adeus!")
                 break
             elif command in self.commands:
@@ -38,14 +38,14 @@ class PlayerCLI(SimpleCLI):
         self.player_model.create_basketball_player(name, number, age)
 
         time = input(name + " joga para que time?").title()
-        print(time)
+
         self.player_model.create_Joga_no(name, time)
-        x = input(name + " já jogou com um jogador profissional? 1-Sim  2-Não" )
+        x = input(name + " já jogou com um jogador profissional? 1-Sim  2-Não ")
         while(x.lower() == "sim" or x == "1"):
             name2 = input("Com quem " + name + " jogou? ").title()
-            print(name2)
+            
             self.player_model.create_Ja_jogou_com(name, name2)
-            x = input("Deseja adicionar mais um jogador com quem " + name + " jogou? 1-Sim 2-Não" )
+            x = input("Deseja adicionar mais um jogador com quem " + name + " jogou? 1-Sim 2-Não ")
      
 
     def create_basketball_team(self):
