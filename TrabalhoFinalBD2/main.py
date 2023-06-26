@@ -1,3 +1,6 @@
+# Felipe Henrique Conrado - 155
+# Frederico Flauzino Wlassow - 153
+
 from database import Database
 from player_database import PlayerDatabase
 from cli import PlayerCLI
